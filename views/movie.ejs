@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <% if(movie !== null){ %>
+           <p><%= movie.title %></p>
+           <ul>
+            <li><b>Tagline</b> : <%= movie.tagline %></li>
+            <li><b>Genres</b> : <%= movie.genres %></li>
+            <li><b>Production Companies</b> : <%= movie.production %></li>
+            <li><b>Release date</b> : <%= movie.releaseDate %></li>
+            <li><b>Languages</b> : <%= movie.languages %></li>
+            <li><b>Overview</b> : <%= movie.overview %></li>
+          </ul>
+        <% } %>
+
+        <% if(error !== null){ %>
+          <p><%= error %></p>
+        <% } %>
+      </fieldset>
+    </div>
+  </body>
+</html>
